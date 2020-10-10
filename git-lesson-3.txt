@@ -14,7 +14,7 @@ Example:
 
 your-path/git-learning (master)
 $ git init
-Reinitialized existing Git repository in C:/Users/mmangane/OneDrive - Capgemini/Manoj-Data-OneDrive-Backup/Manoj_Data/Offical_Data/CG-iTransform/git-learning/.git/
+Reinitialized existing Git repository in your-pathgit-learning/.git/
 
 your-path/git-learning (master)
 $ git status
@@ -40,7 +40,7 @@ The most similar command is
 your-path/git-learning (master)
 $ git log
 commit df65e9a4a265959d8561c0d062c41a647d8b4e71 (HEAD -> master, origin/master)
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: manoj-mangane-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 22:30:48 2020 -0500
 
     git commands and screenshots added...

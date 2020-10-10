@@ -17,8 +17,8 @@ Why ?
 
 
 git init
-git config --global user.name 'manoj-mangane-cg'
-git config --global user.email 'manoj.mangane@gmail.com'
+git config --global user.name 'your-email-id-cg'
+git config --global user.email 'your-email-id@gmail.com'
 
 For Deletion a file
 git rm --cached <<filename>>
@@ -105,10 +105,10 @@ $ git init
 Reinitialized existing Git repository in C:/Users/mmangane/OneDrive - Capgemini/Manoj-Data-OneDrive-Backup/Manoj_Data/Offical_Data/CG-iTransform/git-test/demo-repo/.git/
 
 your-path/CG-iTransform/git-test/demo-repo (master)
-$ git config --global user.name 'manoj-mangane-cg'
+$ git config --global user.name 'your-email-id-cg'
 
 your-path/CG-iTransform/git-test/demo-repo (master)
-$ git config --global user.email 'manoj.mangane@gmail.com'
+$ git config --global user.email 'your-email-id@gmail.com'
 
 your-path/CG-iTransform/git-test/demo-repo (master)
 $ git status
@@ -154,7 +154,7 @@ Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Writing objects: 100% (3/3), 268 bytes | 33.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-To https://github.com/manoj-mangane-cg/demo-repo.git
+To https://github.com/your-email-id-cg/demo-repo.git
    48216d4..a66e62e  master -> master
 
 your-path/CG-iTransform/git-test/demo-repo (master)
@@ -272,7 +272,7 @@ Compressing objects: 100% (4/4), done.
 Writing objects: 100% (8/8), 633 bytes | 57.00 KiB/s, done.
 Total 8 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), done.
-To https://github.com/manoj-mangane-cg/demo-repo.git
+To https://github.com/your-email-id-cg/demo-repo.git
    a66e62e..5fb1a5b  master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
@@ -297,7 +297,7 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 300 bytes | 27.00 KiB/s, done.
 Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To https://github.com/manoj-mangane-cg/demo-repo.git
+To https://github.com/your-email-id-cg/demo-repo.git
    5fb1a5b..4cacfe8  master -> master
 
 your-path/CG-iTransform/git-test/demo-repo (master)

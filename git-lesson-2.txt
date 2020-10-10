@@ -33,7 +33,7 @@ ORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR-------------->
 
 your-path/CG-iTransform/git-demo-1
 $ git init
-Initialized empty Git repository in C:/Users/mmangane/OneDrive - Capgemini/Manoj-Data-OneDrive-Backup/Manoj_Data/Offical_Data/CG-iTransform/git-demo-1/.git/
+Initialized empty Git repository in your-pathCG-iTransform/git-demo-1/.git/
 
 your-path/CG-iTransform/git-demo-1 (master)
 $ touch m1.txt
@@ -67,7 +67,7 @@ nothing to commit, working tree clean
 your-path/CG-iTransform/git-demo-1 (master)
 $ git log
 commit ae841e885cf1380b1d820a4dd48081e0597e5a93 (HEAD -> master)
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 22:05:19 2020 -0500
 
     m1 file added.
@@ -103,13 +103,13 @@ $ git commit -m 'f1.txt file added'
 your-path/CG-iTransform/git-demo-1 (feature)
 $ git log
 commit 22b0a845337838759d88e77ae9f62e9a094546e3 (HEAD -> feature)
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 22:08:07 2020 -0500
 
     f1.txt file added
 
 commit ae841e885cf1380b1d820a4dd48081e0597e5a93 (master)
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 22:05:19 2020 -0500
 
     m1 file added.
@@ -133,13 +133,13 @@ $ git commit -m 'm2.txt added'
 your-path/CG-iTransform/git-demo-1 (master)
 $ git log
 commit 5c8ae7e217d25237512f764e45c168386c8fa7d0 (HEAD -> master)
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 22:09:22 2020 -0500
 
     m2.txt added
 
 commit ae841e885cf1380b1d820a4dd48081e0597e5a93
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 22:05:19 2020 -0500
 
     m1 file added.
@@ -160,19 +160,19 @@ Successfully rebased and updated refs/heads/feature.
 your-path/CG-iTransform/git-demo-1 (feature)
 $ git log
 commit 204c9e7b621c593022ff933446fd57d0837c701d (HEAD -> feature)
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 22:08:07 2020 -0500
 
     f1.txt file added
 
 commit 5c8ae7e217d25237512f764e45c168386c8fa7d0 (master)
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 22:09:22 2020 -0500
 
     m2.txt added
 
 commit ae841e885cf1380b1d820a4dd48081e0597e5a93
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 22:05:19 2020 -0500
 
     m1 file added.
@@ -229,9 +229,9 @@ Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 1 local object.
 remote:
 remote: Create a pull request for 'testing-rebase' on GitHub by visiting:
-remote:      https://github.com/manoj-mangane-cg/demo-repo/pull/new/testing-rebase
+remote:      https://github.com/your-email-id-cg/demo-repo/pull/new/testing-rebase
 remote:
-To https://github.com/manoj-mangane-cg/demo-repo.git
+To https://github.com/your-email-id-cg/demo-repo.git
  * [new branch]      testing-rebase -> testing-rebase
 
 g
@@ -279,7 +279,7 @@ Compressing objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 354 bytes | 44.00 KiB/s, done.
 Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To https://github.com/manoj-mangane-cg/demo-repo.git
+To https://github.com/your-email-id-cg/demo-repo.git
    b99b231..312079c  master -> master
 
 your-path/CG-iTransform/git-test/demo-repo (master)
@@ -325,42 +325,42 @@ $
 your-path/CG-iTransform/git-test/demo-repo (testing-rebase)
 $ git log
 commit 78e95eda9ec77bd860568eca4c07e9dc7d01b7b9 (HEAD -> testing-rebase)
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 21:35:37 2020 -0500
 
     new test-rebase file content modified 2-Time
 
 commit 73b8e73aab844da4ba9db283d3b6987631fa3c54
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 21:30:32 2020 -0500
 
     new test-rebase file added
 
 commit 312079c0d11de7f85393a7ff6359c744fe4a8e67 (origin/master, origin/HEAD, master)
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 21:38:30 2020 -0500
 
     For Testing rebase command text added...
 
 commit c861784344e1f4c6e1d9f79b7ff32c0a196bae7a
 Merge: b99b231 ddbe4e6
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Sun Oct 4 15:42:40 2020 -0500
 :...skipping...
 commit 78e95eda9ec77bd860568eca4c07e9dc7d01b7b9 (HEAD -> testing-rebase)
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 21:35:37 2020 -0500
 
     new test-rebase file content modified 2-Time
 
 commit 73b8e73aab844da4ba9db283d3b6987631fa3c54
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 21:30:32 2020 -0500
 
     new test-rebase file added
 
 commit 312079c0d11de7f85393a7ff6359c744fe4a8e67 (origin/master, origin/HEAD, master)
-Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Author: your-email-id-cg <your-email-id@gmail.com>
 Date:   Fri Oct 9 21:38:30 2020 -0500
 
     For Testing rebase command text added...
