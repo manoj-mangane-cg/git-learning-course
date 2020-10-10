@@ -1,0 +1,464 @@
+Login to iTransform Link : https://degreed.com/plan/1499097#/
+
+=======================================================================
+Course 1 : iTransform Full Stack Angular, Spring Boot MS & MongoDB
+=======================================================================
+
+START: LESSON 1:
+
+github public account creation & after assignment need to send 
+
+A) Git -- my gmail and swadhya
+
+Why ?
+-> Maintain the History
+-> Collaboration (Easy to collaborate with other peoples code)
+-> Feature Branches (Multiple Task at a time: Keep track of the task/branches)
+
+
+git init
+git config --global user.name 'manoj-mangane-cg'
+git config --global user.email 'manoj.mangane@gmail.com'
+
+For Deletion a file
+git rm --cached <<filename>>
+
+For addition 
+git add <<filename>>
+
+for everything
+git add .
+
+For specific ext file
+git add *.<file_ext>
+
+git commit - m 'your message'
+
+git status
+
+git push -u origin <<current-branch-name>>
+
+Creating new files in git
+touch filename.fileext
+
+For ignore file
+- First create .gitignore file
+> touch .gitignore
+- Then add the filename or folder name in .gitignore file
+> git add .
+> git status <-- For verification
+
+
+** Branches **
+Create new branch
+$ git branch <<your-test-feature-branch-name>>
+
+Get the list of branches
+$ git branch
+
+Switch to that brach
+$ git checkout <<your-test-feature-branch-name>>
+
+Get the friends changes to your local
+git pull
+
+clone the branch
+git clone -b <<your.git url>>
+
+
+
+
+your-path/CG-iTransform/git-test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    .test-file.txt.swp
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    test-file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo-repo/
+
+
+your-path/CG-iTransform/git-test (master)
+$ cd demo-repo/
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test-file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/mmangane/OneDrive - Capgemini/Manoj-Data-OneDrive-Backup/Manoj_Data/Offical_Data/CG-iTransform/git-test/demo-repo/.git/
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git config --global user.name 'manoj-mangane-cg'
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git config --global user.email 'manoj.mangane@gmail.com'
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test-file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git add test-file.txt
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   test-file.txt
+
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$  git commit -m 'Initial commits'
+[master a66e62e] Initial commits
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 268 bytes | 33.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/manoj-mangane-cg/demo-repo.git
+   48216d4..a66e62e  master -> master
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+
+
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ touch .gitignore
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ touch log.txt
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git add .
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git add .
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   dir1/test-file-1.txt
+
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$   git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   dir1/test-file-1.txt
+
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git commit -m 'another change'
+[master 8eb5b4d] another change
+ 2 files changed, 3 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 dir1/test-file-1.txt
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git branch test-feature-branch
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git checkout  test-feature-branch
+Switched to branch 'test-feature-branch'
+
+your-path/CG-iTransform/git-test/demo-repo (test-feature-branch)
+$
+
+your-path/CG-iTransform/git-test/demo-repo (test-feature-branch)
+$ touch login.html
+
+your-path/CG-iTransform/git-test/demo-repo (test-feature-branch)
+$ git add .
+
+your-path/CG-iTransform/git-test/demo-repo (test-feature-branch)
+$ git commit -m 'loginpage'
+[test-feature-branch 5fb1a5b] loginpage
+ 1 file changed, 1 insertion(+)
+ create mode 100644 login.html
+
+your-path/CG-iTransform/git-test/demo-repo (test-feature-branch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git  merge login
+merge: login - not something we can merge
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git merge test-feature-branch
+Updating 8eb5b4d..5fb1a5b
+Fast-forward
+ login.html | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 login.html
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git remote
+origin
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (8/8), 633 bytes | 57.00 KiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/manoj-mangane-cg/demo-repo.git
+   a66e62e..5fb1a5b  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ touch README.md
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git add .
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git commit -m 'readme.md'
+[master 4cacfe8] readme.md
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 300 bytes | 27.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/manoj-mangane-cg/demo-repo.git
+   5fb1a5b..4cacfe8  master -> master
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$
+
+************************ END: LESSON 1: ********************
+
+
+START: LESSON 2:
+
+check the commit logs
+$ git log
+or
+
+check the commit graph
+$ git log --all --decorate --oneline --graph
+
+multiple git commands separated by semi-colon
+$ git add <<file_name>> ; git commit -m "commit message" 
+
+Stage and commit shorcut commands
+$ git commit -a -m "commit message"
+
+Merge Types
+1) Fast Forward Merge
+2) Three way merge
+
+1) Fast Forward Merge : It means Straight Merge..ideally no conflicts
+-----------------------
+Consider code merge from feature-branch to master branch
+-> go to master branch 
+-> git branch and check the * symbol which tells your current branch name
+$ git checkout master
+
+Before merge the branches check the differences 
+$ git diff master..<<other-feature-branch-name>>
+
+If everything is fine, then merge the feature-branch into master branch
+$ git merge <<merge-feature-branch-name>>
+
+Then add the proper commit message 
+- press i then write your message
+- to come out from editor mode press 'esc' key type :wq then hit the enter key
+
+To check with commits are already merged with which branch
+$ git branch --merged
+
+ex:
+$ git branch --merged
+* master
+  test-feature-branch
+
+
+Delete the old branch
+$ git branch -d <<merged-feature-branch-name>>
+$ git branch -d <<merged-feature-branch-name>>
+
+Conflict Branch Merge
+----------------------
+Create the new branch and change the same lines
+$ git checkout -b <<your-branch-name>>
+ex:
+$ git checkout -b dev
+Switched to a new branch 'dev'
+
+Then try to edit the common linesx...
+Ex:
+your-drive(dev)
+$ vi README.md
+
+- press i then edit your message
+- to come out from editor mode press 'esc' key type :wq then hit the enter key
+your-drive(dev)
+$ git status
+On branch dev
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+
+your-path(dev)
+$ git diff
+diff --git a/README.md b/README.md
+index d0c6d60..185bc91 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,2 @@
+ #MyTestApp
+-This is my test app
+\ No newline at end of file
++This is my git learning course.
+your-path(dev)
+$ git commit -a -m "modified some content in .md file"
+[dev 6343e09] modified some content in .md file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+your-path (master)
+$ git log --all --decorate --oneline --graph
+* 6343e09 (dev) modified some content in .md file
+*   4924009 (HEAD -> master) Merging the test-feature branch to master branch. Merge branch 'test-feature-branch' into master
+|\
+| * 96e4dc2 (origin/test-feature-branch) added image files
+* | 47bd289 (origin/master, origin/HEAD) lesson 1 git commands
+* | 4cacfe8 readme.md
+|/
+* 5fb1a5b loginpage
+* 8eb5b4d another change
+* a66e62e Initial commits
+* 48216d4 file added
+
+
+
+your-path (master)
+$ git merge dev
+Auto-merging test-file.txt
+CONFLICT (content): Merge conflict in test-file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+your-path (master|MERGING)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   test-file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+your-path (master|MERGING)
+$ vi test-file.txt
+
+your-path (master|MERGING)
+$ git add test-file.txt
+
+your-path (master|MERGING)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   test-file.txt
+
+
+your-path (master|MERGING)
+$ git commit
+[master c861784] Merge branch 'dev' into master
+
+your-path (master)
+
+
+
+************************ END: LESSON 2: ********************
+START: LESSON 3:

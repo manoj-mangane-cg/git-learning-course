@@ -1,0 +1,366 @@
+
+START: LESSON 2: Git Terminology
+
+project = Repository (repo)
+working directory = workspace/ project working directory 
+Staging = Control whats get commited (For ex: Before selling the house, prepare the house for selling), preparing or getting ready
+Commit = Git's way of saving
+Push : Fromlocal hard drive data send it to github repo - $ git push origin <<your-branch-name>>
+Pull : From GitHub repo Data Fetching to Local - $ git pull origin <<your-branch-name>>
+or git checkout -- . <-- Last commited Data
+
+
+
+################# Git Rebase #############################
+-> One of the code merging techniques
+-> Always do on your own local/separate feature branch (ie. not the shared feature branch)
+-> It helps to get the latest master branch code to your feature branch
+Follow below step's
+1. Do changes to your own current feature branch
+2. To get the latest master branch changes to your current feature-branch
+
+$your-feature-branch-name>
+git checkout <<your-feature-branch-name>>
+
+$your-feature-branch-name>
+git status --> all uptodate
+
+$your-feature-branch-name>
+git rebase master <-- After this you will get all the lastest code from master branch to your -feature-branch.
+
+ORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR-------------->
+
+
+your-path/CG-iTransform/git-demo-1
+$ git init
+Initialized empty Git repository in C:/Users/mmangane/OneDrive - Capgemini/Manoj-Data-OneDrive-Backup/Manoj_Data/Offical_Data/CG-iTransform/git-demo-1/.git/
+
+your-path/CG-iTransform/git-demo-1 (master)
+$ touch m1.txt
+
+your-path/CG-iTransform/git-demo-1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        m1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+your-path/CG-iTransform/git-demo-1 (master)
+$ git add .
+
+your-path/CG-iTransform/git-demo-1 (master)
+$ git commit -m 'm1 file added.'
+[master (root-commit) ae841e8] m1 file added.
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 m1.txt
+
+your-path/CG-iTransform/git-demo-1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+your-path/CG-iTransform/git-demo-1 (master)
+$ git log
+commit ae841e885cf1380b1d820a4dd48081e0597e5a93 (HEAD -> master)
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 22:05:19 2020 -0500
+
+    m1 file added.
+
+your-path/CG-iTransform/git-demo-1 (master)
+$ git branch feature
+
+your-path/CG-iTransform/git-demo-1 (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+your-path/CG-iTransform/git-demo-1 (feature)
+$ touch f1.txt
+
+your-path/CG-iTransform/git-demo-1 (feature)
+$ git status
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        f1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+your-path/CG-iTransform/git-demo-1 (feature)
+$ git add .
+
+your-path/CG-iTransform/git-demo-1 (feature)
+$ git commit -m 'f1.txt file added'
+[feature 22b0a84] f1.txt file added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 f1.txt
+
+your-path/CG-iTransform/git-demo-1 (feature)
+$ git log
+commit 22b0a845337838759d88e77ae9f62e9a094546e3 (HEAD -> feature)
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 22:08:07 2020 -0500
+
+    f1.txt file added
+
+commit ae841e885cf1380b1d820a4dd48081e0597e5a93 (master)
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 22:05:19 2020 -0500
+
+    m1 file added.
+
+your-path/CG-iTransform/git-demo-1 (feature)
+$ git checkout master
+Switched to branch 'master'
+
+your-path/CG-iTransform/git-demo-1 (master)
+$ touch m2.txt
+
+your-path/CG-iTransform/git-demo-1 (master)
+$ git add .
+
+your-path/CG-iTransform/git-demo-1 (master)
+$ git commit -m 'm2.txt added'
+[master 5c8ae7e] m2.txt added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 m2.txt
+
+your-path/CG-iTransform/git-demo-1 (master)
+$ git log
+commit 5c8ae7e217d25237512f764e45c168386c8fa7d0 (HEAD -> master)
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 22:09:22 2020 -0500
+
+    m2.txt added
+
+commit ae841e885cf1380b1d820a4dd48081e0597e5a93
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 22:05:19 2020 -0500
+
+    m1 file added.
+
+your-path/CG-iTransform/git-demo-1 (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+your-path/CG-iTransform/git-demo-1 (feature)
+$ git status
+On branch feature
+nothing to commit, working tree clean
+
+your-path/CG-iTransform/git-demo-1 (feature)
+$ git rebase master
+Successfully rebased and updated refs/heads/feature.
+
+your-path/CG-iTransform/git-demo-1 (feature)
+$ git log
+commit 204c9e7b621c593022ff933446fd57d0837c701d (HEAD -> feature)
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 22:08:07 2020 -0500
+
+    f1.txt file added
+
+commit 5c8ae7e217d25237512f764e45c168386c8fa7d0 (master)
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 22:09:22 2020 -0500
+
+    m2.txt added
+
+commit ae841e885cf1380b1d820a4dd48081e0597e5a93
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 22:05:19 2020 -0500
+
+    m1 file added.
+
+your-path/CG-iTransform/git-demo-1 (feature)
+$
+=============
+
+## Git Rebase
+-> Always do on your own local/separate feature branch (ie. not the shared feature branch)
+-> It helps to get the latest master branch code to your feature branch
+Follow below step's
+1. Do changes to your own current feature branch
+your-pathdemo-repo (testing-rebase)
+git checkout -b <<your-branch-name>>
+
+
+your-pathdemo-repo (testing-rebase)
+$ touch new-rebasefile.txt
+$ git status
+On branch testing-rebase
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new-rebasefile.txt
+
+your-pathdemo-repo (testing-rebase)
+$ git commit -m 'new test-rebase file added'
+[testing-rebase c47f828] new test-rebase file added
+ 1 file changed, 10 insertions(+)
+ create mode 100644 new-rebasefile.txt
+
+
+your-pathdemo-repo (testing-rebase)
+$ git push
+fatal: The current branch testing-rebase has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin testing-rebase
+
+
+your-pathdemo-repo (testing-rebase)
+$ git status
+On branch testing-rebase
+nothing to commit, working tree clean
+
+your-pathdemo-repo (testing-rebase)
+$ git push origin testing-rebase
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 883 bytes | 176.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'testing-rebase' on GitHub by visiting:
+remote:      https://github.com/manoj-mangane-cg/demo-repo/pull/new/testing-rebase
+remote:
+To https://github.com/manoj-mangane-cg/demo-repo.git
+ * [new branch]      testing-rebase -> testing-rebase
+
+g
+your-path/CG-iTransform/git-test/demo-repo (testing-rebase)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ touch README.md
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git commit -a -m 'For Testing rebase command text added...'
+[master 312079c] For Testing rebase command text added...
+ 1 file changed, 2 insertions(+)
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 354 bytes | 44.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/manoj-mangane-cg/demo-repo.git
+   b99b231..312079c  master -> master
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git branch
+* master
+  testing-rebase
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git test-file.txt
+test-file.txt
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git test-file.txt
+test-file.txt
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git checkout -b testing-rebase
+fatal: A branch named 'testing-rebase' already exists.
+
+your-path/CG-iTransform/git-test/demo-repo (master)
+$ git checkout testing-rebase
+Switched to branch 'testing-rebase'
+
+your-path/CG-iTransform/git-test/demo-repo (testing-rebase)
+$ git rebase master
+Successfully rebased and updated refs/heads/testing-rebase.
+
+your-path/CG-iTransform/git-test/demo-repo (testing-rebase)
+$ vi README.md
+
+your-path/CG-iTransform/git-test/demo-repo (testing-rebase)
+$
+
+
+
+your-path/CG-iTransform/git-test/demo-repo (testing-rebase)
+$ git log
+commit 78e95eda9ec77bd860568eca4c07e9dc7d01b7b9 (HEAD -> testing-rebase)
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 21:35:37 2020 -0500
+
+    new test-rebase file content modified 2-Time
+
+commit 73b8e73aab844da4ba9db283d3b6987631fa3c54
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 21:30:32 2020 -0500
+
+    new test-rebase file added
+
+commit 312079c0d11de7f85393a7ff6359c744fe4a8e67 (origin/master, origin/HEAD, master)
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 21:38:30 2020 -0500
+
+    For Testing rebase command text added...
+
+commit c861784344e1f4c6e1d9f79b7ff32c0a196bae7a
+Merge: b99b231 ddbe4e6
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Sun Oct 4 15:42:40 2020 -0500
+:...skipping...
+commit 78e95eda9ec77bd860568eca4c07e9dc7d01b7b9 (HEAD -> testing-rebase)
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 21:35:37 2020 -0500
+
+    new test-rebase file content modified 2-Time
+
+commit 73b8e73aab844da4ba9db283d3b6987631fa3c54
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 21:30:32 2020 -0500
+
+    new test-rebase file added
+
+commit 312079c0d11de7f85393a7ff6359c744fe4a8e67 (origin/master, origin/HEAD, master)
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 21:38:30 2020 -0500
+
+    For Testing rebase command text added...
