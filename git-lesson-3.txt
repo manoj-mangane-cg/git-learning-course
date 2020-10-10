@@ -1,2 +1,92 @@
 ###
-Git Fork : It helps to create exaact replica of another Repo
+Git Fork : It helps to create exact replica of another Repo
+
+Git rebase: 
+$ git rebase -i HEAD~2 <--- by using this option you can correct the commit message context. Only updating commit-id
+$ git log --oneline
+
+Git Ammend Commends: When we need not to modify the last commit message and without this need to add the files to that commit use below commands
+$ git add .
+$ git commit --amend --no-edit
+$ git log --oneline
+
+Example:
+
+your-path/git-learning (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/mmangane/OneDrive - Capgemini/Manoj-Data-OneDrive-Backup/Manoj_Data/Offical_Data/CG-iTransform/git-learning/.git/
+
+your-path/git-learning (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git-lesson-3.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        screenshots/rewriting-git-history.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+your-path/git-learning (master)
+$ git logs
+git: 'logs' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+
+your-path/git-learning (master)
+$ git log
+commit df65e9a4a265959d8561c0d062c41a647d8b4e71 (HEAD -> master, origin/master)
+Author: manoj-mangane-cg <manoj.mangane@gmail.com>
+Date:   Fri Oct 9 22:30:48 2020 -0500
+
+    git commands and screenshots added...
+
+your-path/git-learning (master)
+$ git log --oneline
+df65e9a (HEAD -> master, origin/master) git commands and screenshots added...
+
+your-path/git-learning (master)
+$ git add .
+
+your-path/git-learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   git-lesson-3.txt
+        new file:   screenshots/rewriting-git-history.png
+
+
+your-path/git-learning (master)
+$ git commit --amend -no-edit
+error: did you mean `--no-edit` (with two dashes)?
+
+your-path/git-learning (master)
+$ git commit --amend --no-edit
+[master c21879b] git commands and screenshots added...
+ Date: Fri Oct 9 22:30:48 2020 -0500
+ 8 files changed, 836 insertions(+)
+ create mode 100644 git-lesson-1.txt
+ create mode 100644 git-lesson-2.txt
+ create mode 100644 git-lesson-3.txt
+ create mode 100644 screenshots/git-complete-workflow.png
+ create mode 100644 screenshots/git-push-workflow.png
+ create mode 100644 screenshots/merge-rebase-difference-by-image.png
+ create mode 100644 screenshots/merge-rebase-difference.png
+ create mode 100644 screenshots/rewriting-git-history.png
+
+your-path/git-learning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+your-path/git-learning (master)
+$ git log --oneline
+c21879b (HEAD -> master) git commands and screenshots added...
+
+your-path/git-learning (master)
+$
